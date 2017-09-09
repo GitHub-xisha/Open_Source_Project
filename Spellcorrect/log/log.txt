@@ -1,0 +1,106 @@
+Client 127.0.0.1:53506 is online.
+
+get 0 cache.
+
+get 0 cache.
+
+Search from cache: niha -> nigh
+
+get 1 cache.
+
+One pair is add to cache: goo -> god
+
+get 2 cache.
+
+One pair is add to cache: hol -> holy
+
+get 0 cache.
+
+get 1 cache.
+
+Client 127.0.0.1:53506 is offline.
+
+Client 127.0.0.1:53508 is online.
+
+get 0 cache.
+
+Search from cache: beijin -> been
+
+get 0 cache.
+
+One pair is add to cache: shangha -> shall
+
+Client 127.0.0.1:53508 is offline.
+
+Client 127.0.0.1:53510 is online.
+
+get 0 cache.
+
+get 0 cache.
+
+One pair is add to cache: niha -> nigh
+
+get 1 cache.
+
+One pair is add to cache: tengxu -> ten
+
+get 0 cache.
+
+One pair is add to cache: baid -> said
+
+get 1 cache.
+
+Client 127.0.0.1:53514 is online.
+
+get 0 cache.
+
+One pair is add to cache: h -> he
+
+get 0 cache.
+
+get 1 cache.
+
+One pair is add to cache: wor -> for
+
+get 2 cache.
+
+Search from cache: niha -> nigh
+
+get 0 cache.
+
+One pair is add to cache: gi -> i
+
+Client 127.0.0.1:53514 is offline.
+
+Client 127.0.0.1:53516 is online.
+
+get 0 cache.
+
+get 1 cache.
+
+Client 127.0.0.1:53518 is online.
+
+get 0 cache.
+
+get 1 cache.
+
+Client 127.0.0.1:53520 is online.
+
+get 0 cache.
+
+get 1 cache.
+
+Search from cache: niha -> nigh
+
+get 0 cache.
+
+Client 127.0.0.1:53522 is online.
+
+get 0 cache.
+
+Search from cache: niha -> nigh
+
+get 0 cache.
+
+Client 127.0.0.1:53522 is offline.
+
