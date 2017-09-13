@@ -104,16 +104,17 @@ int main(int argc,char* argv[])
 			if(evs[i].data.fd==sfd)//网络请求到达;找到evs集合中监听的sfd的
 			{
 				new_fd=accept(sfd,NULL,NULL);
+		//		将用户登录验证的任务也交给子进程去做，如果在这里进行登录验证,则无法及时响应其他客户端的登录请求,
+        //	    需要等到当前用户登录成功后才能响应其他客户端的登录请求.
+		//		while(1){
+		//			int command=0;
+		//			recv_n(new_fd,(char*)&command,sizeof(int));                 //接受login or signup 命令
+		//			//printf("recive command is %d\n",command);
+		//			if(command==111) {if(judge_clientlogin(new_fd)>0) break ; }      //用户登录验证
+		//			else if(command==222) judge_clientSignup(new_fd);                //用户注册
+		//		}
 				
-				while(1){
-					int command=0;
-					recv_n(new_fd,(char*)&command,sizeof(int));                 //接受login or signup 命令
-					//printf("recive command is %d\n",command);
-					if(command==111) {if(judge_clientlogin(new_fd)>0) break ; }      //用户登录验证
-					else if(command==222) judge_clientSignup(new_fd);                //用户注册
-				}
-				
-				insert_loginlog();      //记录日志信息
+	    //			insert_loginlog();      //记录日志信息
 				for(j=0;j<child_num;j++)  //找到非忙碌的子进程，然后把new_fd发送给它
 				{	
 					if(p[j].busy==0)

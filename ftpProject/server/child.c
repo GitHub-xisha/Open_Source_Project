@@ -195,11 +195,23 @@ void child_handle(int fdr)
 	char flag=1;
 	int new_fd;
 	train t;
-	int command;
+	int command=0;
 	while(1)
 	{
 		recv_fd(fdr,&new_fd);//从父进程接收任务     //连接只需要接受一次,多次时fdr值已为空
-		while(1){
+		//处理客户端的登录请求任务
+        while(1)
+        {
+            recv_n(new_fd,(char*)&command,sizeof(int));
+            if(command==111)
+            {
+                if(judge_clientlogin(new_fd)>0) break;
+            }else if(command==222){
+                judge_clientSignup(new_fd);
+            }
+        }
+        insert_loginlog();
+        while(1){
 		    recv_n(new_fd,(char*)&command,sizeof(int));    //不断接受客户端命令
 		    
 		    if(command==0){                               //客户端按下ctrl+c 传递给server 0号命令
